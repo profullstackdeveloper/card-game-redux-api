@@ -14,12 +14,12 @@ const CardMovement = (direction) => keyframes`
     }
     to {
         width: 0px;
-        transform: ${direction == 'up' ? 'translateY(-200%)' : 'translateY(200%)'}
+        transform: ${direction === 'up' ? 'translateY(-200%)' : 'translateY(200%)'}
     }
 `
 const CardContainer = styled.div`
     width: calc(100% / 52);
-    animation: ${props => props.action == 'true' ? CardMovement(props.direction) : CardOpenAnimation} 0.5s ${props => props.delay}s ease-in-out 1;
+    animation: ${props => props.action === 'true' ? CardMovement(props.direction) : CardOpenAnimation} 0.5s ${props => props.delay}s ease-in-out 1;
     animation-fill-mode: forwards;
     z-index: 2;
     &:hover {
@@ -49,7 +49,7 @@ export default function Card({player1SelectedCard, setPlayer1SelectedCard, playe
         setDirection('up');
     }
     React.useEffect(() => {
-        if(player2SelectedCard == cardIndex) {
+        if(player2SelectedCard === cardIndex) {
             setAction(true);
             setDelay(1);
             setDirection('down');

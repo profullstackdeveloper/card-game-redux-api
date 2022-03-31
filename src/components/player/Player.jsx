@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const PlayerBoard = styled.div`
     display: flex;
     align-items: center;
-    flex-direction: ${props => props.reverse == 'false' ? 'row' : 'row-reverse'};
+    flex-direction: ${props => props.reverse === 'false' ? 'row' : 'row-reverse'};
     position: absolute;
     top: ${props => props.position.top};
     left: ${props => props.position.left};

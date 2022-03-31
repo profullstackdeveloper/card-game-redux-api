@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import Card from '../components/card/Card';
 import Player from '../components/player/Player';
 import { useSelector, useDispatch } from 'react-redux'
-import { chosenCardsForPlayers, createDeck, getCards } from '../store/reducer'
+import { createDeck, getCards } from '../store/reducer'
 import Modal from '../components/modal/Modal';
 
 const Container = styled.div`
@@ -103,7 +103,7 @@ export default function Home() {
     }
     React.useEffect(() => {
         if(player1SelectedCard) {
-            const number = Math.floor(Math.random() * 52) == player1SelectedCard ? player1SelectedCard + 1 : Math.floor(Math.random() * 52);
+            const number = Math.floor(Math.random() * 52) === player1SelectedCard ? player1SelectedCard + 1 : Math.floor(Math.random() * 52);
             setPlayer2SelectedCard(number);
         }
     }, [player1SelectedCard])
