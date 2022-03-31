@@ -1,0 +1,11 @@
+@font-face {
+    font-family: Evil;
+    font-display: swap;
+    src: url('./quicksilver-fast-font/QuicksilverFastRegular-DO3oE.ttf');
+}
+
+@font-face {
+    font-family: Robus;
+    font-display: swap;
+    src: url('./robus-font/Robus-BWqOd.otf');
+}
